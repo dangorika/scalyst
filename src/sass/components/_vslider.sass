@@ -1,0 +1,169 @@
+// .vsliders
+// 	display: flex
+// 	align-items: center
+
+// .vslider
+// 	position: relative
+// 	width: calc(100% - 80px)
+// 	+rmin($m)
+// 		width: calc(100% - 120px)
+// 	.swiper-container
+// 		height: 200px
+// 		padding: 0 5px
+// 		+rmin($d)
+// 			height: 300px
+// 		&.is-clip
+// 			.swiper-slide
+// 				opacity: 1
+// 	.swiper-slide
+// 		display: flex
+// 		align-items: center
+// 		max-width: 300px
+// 		opacity: .2
+// 		transition: opacity .2s cubic-bezier(0.215, 0.61, 0.355, 1)
+// 		+rmin($d)
+// 			max-width: 400px
+// 		h2
+// 			font-size: 14px
+// 			+ssp-l
+// 			font-weight: normal
+// 			position: relative
+// 			color: #ccc
+// 			line-height: 1
+// 			+rmin($m)
+// 				font-size: 16px
+// 			+rmin($d)
+// 				font-size: 20px
+// 			strong, b
+// 				color: #ccc
+// 	.swiper-slide-active
+// 		opacity: 1
+// 		h2
+// 			color: #333
+// 			transform: scale3d(1, 1, 1)
+// 			transform-origin: 0 50%
+// 			transition: transform .5s cubic-bezier(0.215, 0.61, 0.355, 1)
+// 			+rmin($m)
+// 				transform: scale3d(1.4, 1.4, 1)
+// 			+rmin($d)
+// 				transform: scale3d(2, 2, 1)
+// 			strong, b
+// 				color: #333
+
+
+// .vpages
+// 	position: relative
+// 	width: 80px
+// 	+rmin($m)
+// 		width: 120px
+// 	.swiper-container
+// 		height: 70px
+// 		padding: 0 5px
+// 		&.is-clip
+// 			.swiper-slide
+// 				opacity: 1
+// 	.swiper-slide
+// 		opacity: .2
+// 		transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+// 		.total
+// 			display: none
+// 			color: #ccc
+// 		h3
+// 			font-size: 10px
+// 			color: #ccc
+// 	.swiper-slide-active
+// 		opacity: 1
+// 		.total
+// 			display: inline
+// 		h3
+// 			color: #333
+
+
+.vsliders
+	display: flex
+	align-items: center
+
+.vslider
+	position: relative
+	width: calc(100% - 80px)
+	+rmin($m)
+		width: calc(100% - 120px)
+	&__in
+		height: 300px
+		padding: 0 5px
+		overflow: hidden
+		// +rmin($d)
+		// 	height: 300px
+		&.is-clip
+			.vslide
+				opacity: 1
+	.vslide
+		display: flex
+		align-items: center
+		max-width: 300px
+		height: 100px
+		opacity: .2
+		transform-origin: 0 50%
+		// transition: opacity .2s cubic-bezier(0.215, 0.61, 0.355, 1)
+		+rmin($d)
+			max-width: 400px
+		h2
+			font-size: 14px
+			+ssp-l
+			font-weight: normal
+			position: relative
+			color: inherit
+			line-height: 1
+			transform-origin: 0 50%
+			transition: transform .8s cubic-bezier(0.215, 0.61, 0.355, 1)
+			+rmin($m)
+				font-size: 16px
+			+rmin($d)
+				font-size: 20px
+			strong, b
+				color: inherit
+			// opacity: 1
+			h2
+				color: inherit
+				// transform: scale3d(1, 1, 1)
+				// transform-origin: 0 50%
+				// transition: transform .5s cubic-bezier(0.215, 0.61, 0.355, 1)
+				// +rmin($m)
+				// 	transform: scale3d(1.4, 1.4, 1)
+				// +rmin($d)
+				// 	transform: scale3d(2, 2, 1)
+				strong, b
+					color: inherit
+
+
+.vpages
+	position: relative
+	width: 80px
+	+rmin($m)
+		width: 120px
+	&__in
+		height: 70px
+		padding: 0 5px
+		overflow: hidden
+		&.is-clip
+			.vpage
+				opacity: 1
+	.vpage
+		opacity: .2
+		height: 23.3333px
+		color: #ccc
+		// transition: opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+		.total
+			// display: none
+			opacity: 0
+			color: #ccc
+		h3
+			font-size: 10px
+			color: inherit
+		&.is-active
+			// opacity: 1
+			.total
+				display: inline
+			h3
+				color: #333
+

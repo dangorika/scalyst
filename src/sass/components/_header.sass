@@ -1,0 +1,122 @@
+.header
+	position: relative
+	z-index: 100
+	transform-origin: 0 0
+	+rmin($d)
+		width: 100%
+		height: 70px
+	&.is-expanded
+		+rmin($d)
+			height: 130px
+	&__top
+		display: flex
+		justify-content: space-between
+		padding: 0 25px
+		+rmin($m)
+			align-items: center
+		+rmin($d)
+			padding: 0 50px
+	&__bottom
+		display: none
+		+rmin($d)
+			display: block
+			position: relative
+			z-index: -1
+			top: -30px
+			pointer-events: none
+			opacity: 0
+
+.logo
+	display: flex
+	flex-direction: column
+	+rmin($m)
+		flex-direction: row
+		align-items: center
+	a
+		display: block
+		position: relative
+		width: 150px
+		span
+			display: inline-block
+			padding: 10px 0
+		+rmin($d)
+			width: 205px
+	&__img
+		width: 120px
+		// position: relative
+		display: block
+		padding: 25px 0 10px
+		+rmin($m)
+			padding: 0
+		img
+			max-width: 100%
+			display: block
+	&__text
+		display: block
+		+ssp-sb
+		font-size: 9px
+		letter-spacing: .3em
+		text-transform: uppercase
+		color: #555555
+		line-height: 1.6
+		width: 150px
+		+rmin($m)
+			width: calc(100% - 150px)
+		+rmin($d)
+			width: calc(100% - 205px)
+.nav
+	display: none
+	+rmin($d)
+		display: flex
+		justify-content: flex-end
+	a
+		text-transform: uppercase
+		text-decoration: none
+		+ssp-sb
+		font-size: 9px
+		letter-spacing: .3em
+		color: #333
+		margin-left: 20px
+		position: relative
+		height: 70px
+		line-height: 70px
+.mob-btn
+	height: 70px
+	display: flex
+	position: relative
+	left: 12px
+	+rmin($d)
+		display: none
+	button
+		margin: auto
+
+
+
+.burger
+	width: 30px
+	height: 30px
+	cursor: pointer
+	transform: translate3d(0,0,0)
+	fill: none
+	path
+		fill: none
+		transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250)
+		stroke-width: 3
+		stroke-linecap: round
+		stroke: #333
+		stroke-dashoffset: 0px
+		stroke-miterlimit: 10
+	&__top,
+	&__bottom
+		stroke-dasharray: 36px 143px
+	&__middle
+		stroke-dasharray: 36px 36px
+	&.is-active
+		path,
+		.burger__top,
+		.burger__bottom
+			stroke-dashoffset: -110px
+			stroke-dashoffset: -110px
+		.burger__middle
+			stroke-dashoffset: -20px
+			stroke-dasharray: 0px 40px

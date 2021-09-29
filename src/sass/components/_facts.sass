@@ -1,0 +1,69 @@
+.fact
+	color: #aaa
+	line-height: 1.6
+	+ssp-sb
+	display: flex
+	justify-content: space-between
+	font-size: 12px
+	position: relative
+	+rmin($m)
+		font-size: 15px
+	&__left
+		min-width: 100px
+		padding-bottom: 130px
+		position: relative
+		+rmin($m)
+			min-width: 205px
+	&__right
+		min-width: 100px
+		position: relative
+		+rmin($m)
+			min-width: 195px
+	&__divider
+		background-color: #ccc
+		width: 100%
+		height: 1px
+		margin: 62px em(25) 0
+		+rmin($m)
+			margin-top: 80px
+
+	h3
+		font-size: 24px
+		color: #aaa
+		font-weight: normal
+		line-height: 1
+		+rmin($m)
+			font-size: 32px
+		+rmin($d)
+			font-size: 40px
+		strong, b
+			font-size: 60px
+			line-height: 1
+			color: #333
+			+rmin($m)
+				font-size: 80px
+			+rmin($d)
+				font-size: 100px
+		em
+			font-style: normal
+			color: #aaa
+		& + p
+			padding-top: 0
+			margin-top: -6px
+	h4
+		font-size: 24px
+		color: #333
+		line-height: 1
+		padding-top: 46px
+		+rmin($m)
+			font-size: 32px
+		+rmin($d)
+			font-size: 40px
+		& + p
+			padding-top: 6px
+	p
+		padding-top: em(62)
+		& + h4
+			padding-top: 18px
+	ul
+		padding-top: 1em

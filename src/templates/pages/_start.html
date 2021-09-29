@@ -1,0 +1,56 @@
+<div class="start">
+
+  {% include "partials/_hlist.html" %}
+
+  <div class="start__text js-lighten cl">
+    {{ text | safe }}
+  </div>
+
+  <div class="scroll js-scroll-start">
+    <div class="scroll__line"></div>
+    <div class="scroll__text">scroll</div>
+  </div>
+
+
+  <div class="start-mob">
+    <a href="team.html" class="start-mob-item">
+      <div class="start-mob-item__img">
+        <img src="img/penrose.png" alt="">
+      </div>
+
+      <div class="start-mob-item__in">
+        <span class="num">01</span>
+        <div class="start-mob-item__svg">
+          {{ mixins.svg_triangle_small('st-triangle') }}
+        </div>
+      </div>
+    </a>
+
+    <a href="webmob.html" class="start-mob-item">
+      <div class="start-mob-item__img">
+        <img src="img/chen.png" alt="">
+      </div>
+
+      <div class="start-mob-item__in">
+        <span class="num">02</span>
+        <div class="start-mob-item__svg">
+          {{ mixins.svg_chen_small('st-chen') }}
+        </div>
+      </div>
+    </a>
+
+
+    <a href="qa.html" class="start-mob-item">
+      <div class="start-mob-item__img">
+        <img src="img/gyroid.png" alt="">
+      </div>
+
+      <div class="start-mob-item__in">
+        <span class="num">03</span>
+        <div class="start-mob-item__svg">
+          {{ mixins.svg_gyroid_small('st-gyroid') }}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+.footer
+	padding: 50px 25px
+	position: relative
+	+rmin($d)
+		padding: 50px
+	&__top
+		margin-bottom: 50px
+		position: relative
+		z-index: 1
+	&__bottom
+		display: flex
+		justify-content: flex-end
+		flex-direction: column
+		position: relative
+		z-index: 1
+		+rmin($m)
+			flex-direction: row
+	&__col
+		+rmin($m)
+			margin-left: 65px
+	&__text
+		font-size: 15px
+		color: #aaa
+		line-height: 1.4
+		margin-bottom: 10px
+		h5
+			font-size: 14px
+			text-transform: uppercase
+			letter-spacing: .4em
+			+ssp-sb
+			font-weight: normal
+		h6
+			font-size: 10px
+			text-transform: uppercase
+			letter-spacing: .4em
+			margin-bottom: 10px
+		a
+			color: #aaa
+			text-decoration: none
+	&__link
+		position: relative
+		a
+			color: #333
+			text-decoration: none
+			display: block
+			span
+				display: block
+				padding: 5px 0
+
+.socials
+	margin-top: 20px
+	+rmin($m)
+		margin-top: 0
+	li
+		margin-bottom: 12px
+	a
+		+ssp-sb
+		color: #333
+		text-decoration: none
+		text-transform: uppercase
+		font-size: 12px
+		letter-spacing: .5em
+		position: relative
+.copyright
+	+ssp-l
+	font-size: 10px
+	color: #aaa
+	line-height: 1

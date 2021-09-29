@@ -1,0 +1,95 @@
+<div class="qa">
+
+  <div class="title">
+    <span class="title__img">
+      <img src="img/gyroid.png" alt="">
+    </span>
+
+    <div class="title__in js-title">
+      <div class="title__text">
+        <span class="num">03</span>
+        <div class="title__svg">
+          {{ mixins.svg_gyroid_small('title-gyroid') }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="brief">
+    <div class="brief__in js-lighten cl">
+      <div class="brief__text">
+        {{ brief | safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll js-scroll">
+    <div class="scroll__line"></div>
+    <div class="scroll__text">scroll</div>
+  </div>
+
+  <div class="sections">
+
+    <section class="section section--desc">
+      {{ mixins.cyl({lg: true, md: true, sm: true}) }}
+
+      <div class="l">
+        {% include "partials/_description.html" %}
+      </div>
+    </section>
+
+    <section class="section section--vsl">
+      {{ mixins.cyl({lg: true, sm: true}) }}
+
+      <div class="l wrap-vsliders">
+        <div class="section__title">
+          <span class="num">001</span>
+          <h3>when do you need it</h3>
+        </div>
+        {% include "partials/_vslider.html" %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="l">
+        <div class="section__title">
+          <span class="num">002</span>
+          <h3>specialisation</h3>
+        </div>
+        {% include "partials/_col-list.html" %}
+      </div>
+    </section>
+
+
+    <section class="section section--onbg">
+      <div class="l wrap-dslider">
+        <div class="section__title">
+          <span class="num">003</span>
+          <h3>process</h3>
+        </div>
+        {% include "partials/_dslider.html" %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="l">
+        <div class="section__title">
+          <span class="num">004</span>
+          <h3>what are you getting</h3>
+        </div>
+        {% include "partials/_full-list.html" %}
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="l">
+        <div class="section__title">
+          <span class="num">005</span>
+          <h3>get in touch</h3>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</div>

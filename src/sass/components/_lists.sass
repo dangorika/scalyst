@@ -1,0 +1,209 @@
+.full-list
+	transform-origin: 0 25%
+	&__text
+		flex-grow: 1
+		padding-left: 40px
+		+rmin($m)
+			padding-left: 80px
+	.num
+		margin-top: em(15)
+		white-space: nowrap
+		+rmin($d)
+			margin-top: em(36)
+	li
+		color: #777
+		font-size: 12px
+		margin-bottom: 40px
+		+ssp-l
+		line-height: 1
+		display: flex
+		align-items: flex-start
+		+rmin($m)
+			font-size: 15px
+		+rmin($d)
+			margin-bottom: 80px
+	h2
+		font-size: 20px
+		color: #333
+		+ssp-sb
+		font-weight: normal
+		margin-bottom: 6px
+		+rmin($m)
+			font-size: 24px
+		+rmin($d)
+			font-size: 40px
+	strong, b
+		color: #333
+		+ssp-sb
+
+.cols
+	display: flex
+	justify-content: space-between
+	flex-direction: column
+	position: relative
+	+rmin($m)
+		flex-direction: row
+
+	&__col
+		width: 100%
+		position: relative
+		z-index: 1
+		+rmin($m)
+			width: 50%
+		&--l
+			margin-bottom: 50px
+			+rmin($m)
+				margin-right: 112px
+				max-width: 400px
+				margin-bottom: 0
+	&__text
+		color: #aaa
+		font-size: 15px
+		position: relative
+		line-height: 1.6
+		.is-clipped
+			z-index: 2
+		p
+			&:not(:last-child)
+				margin-bottom: 25px
+	&__list
+		position: relative
+		.list-title
+			position: absolute
+			top: -66px
+			left: 101px
+		&.is-active
+			.col-list
+				height: auto !important
+		&.is-limited
+			.btn
+				display: inline-block
+		.btn
+			display: none
+			position: relative
+			left: 89px
+			font-size: 12px
+			letter-spacing: .5em
+			+ssp-b
+			padding: 6px 0
+			border-bottom: 2px solid #333
+			span
+				padding: .5em
+				&.is-clip
+					padding: 6px 0
+.col-list
+	overflow: hidden
+	transform-origin: 0 25%
+	&__text
+		flex-grow: 1
+		padding-left: 48px
+	.num
+		margin-bottom: 5px
+		white-space: nowrap
+	li
+		padding-bottom: 50px
+		line-height: 1
+		display: flex
+		align-items: flex-end
+		+rmin($m)
+			padding-bottom: 74px
+	h2
+		font-size: 24px
+		color: #333
+		+ssp-b
+		font-weight: normal
+		+rmin($d)
+			font-size: 40px
+
+.list-title
+	+ssp-sb
+	font-weight: normal
+	font-size: 12px
+	text-transform: uppercase
+	color: #aaa
+	letter-spacing: .3em
+
+.grid-cols
+	margin-top: 100px
+	position: relative
+	.list-title
+		margin-bottom: 82px
+.grid-list
+	column-count: 2
+	column-gap: 60px
+	transform-origin: 0 25%
+	position: relative
+	z-index: 1
+	+rmin($d)
+		column-count: 3
+	li
+		margin-bottom: 30px
+		line-height: 1
+	.num
+		margin-bottom: 24px
+	&__text
+		h2
+			+ssp-b
+			font-size: 16px
+			font-weight: normal
+			+rmin($m)
+				font-size: 24px
+			+rmin($d)
+				font-size: 27px
+
+// .list-mob
+//   display: none
+//   position: relative
+//   +r(1024)
+//     display: block
+//     padding: 0 50px
+//   +xs
+//     padding: 0 25px
+//   // +sm
+//   //  left: $offset-l-mob-xs
+//   // +xs
+//   //  left: 0
+//   .num
+//     position: absolute
+//     top: 20px
+//     left: 0
+//   &__link
+//     text-decoration: none
+//     color: #333
+//     display: block
+//     padding-left: 30px
+//     position: relative
+//     +xs
+//       padding-left: 20px
+//   &__img
+//     width: 315px
+//     height: 90px
+//     display: block
+//     +xs
+//       width: 266px
+//       height: 76px
+//     img
+//       width: 100%
+//       height: 100%
+//       object-fit: contain
+//       object-position: 22.5% 50%
+//   &__svg
+//     width: 315px
+//     height: 90px
+//     display: block
+//     position: absolute
+//     top: 0
+//     left: 30px
+//     +xs
+//       width: 266px
+//       height: 76px
+//       left: 20px
+//     svg
+//       width: 100%
+//       height: 100%
+//   &__item
+//     margin-bottom: 20px
+//     &:nth-child(even)
+//       .list-mob__img
+//         img
+//           object-position: 69.5% 50%

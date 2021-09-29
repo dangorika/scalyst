@@ -1,0 +1,60 @@
+{% set facts = [
+  {
+    fact: '<h3>no. <strong>01</strong></h3>
+      <p>Market of IT Talents in Europe</p>',
+    desc: '<h4>100 000 </h4>
+      <p>IT Professionals</p>'
+  },
+  {
+    fact: '<h3><strong>100<em>+</em></strong></h3>
+      <p>R&D Centers</p>',
+    desc: '<ul>
+        <li>Samsung</li>
+        <li>Boeing</li>
+        <li>Oracle</li>
+        <li>Siemens</li>
+        <li>ABBYY</li>
+        <li>Crytek</li>
+        <li>Magento</li>
+        <li>etc.
+      </ul>'
+  },
+  {
+    fact: '<h3>no. <strong>01</strong></h3>
+      <p>Accessible Capital</p>',
+    desc: '<h4>195%</h4>
+      <p>cheaper than Tel Aviv</p>
+      <h4>218%</h4>
+      <p>cheaper than Amsterdam</p>'
+  },
+  {
+    fact: '<h3>no. <strong>01</strong></h3>
+      <p>European Market for Availability <br>
+      of IT Professionals</p>',
+    desc: '<h4>$2 000</h4>
+      <p>average salary</p>'
+  },
+  {
+    fact: '<h3><strong>05</strong>%</h3>
+      <p>Tax Rate</p>',
+    desc: '<p>For IT Professionals<br>
+      Employers</p>'
+  }
+]
+%}
+
+<div class="facts js-text">
+
+  {% for f in facts %}
+    <div class="fact">
+      <div class="fact__left js-text">
+        <div class="fact__text js-fact-scale">{{ f.fact | safe }}</div>
+      </div>
+      <div class="fact__divider js-fact-draw"></div>
+      <div class="fact__right js-text">
+        <div class="fact__text js-fact-fade">{{ f.desc | safe }}</div>
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

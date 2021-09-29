@@ -1,0 +1,79 @@
+---
+class: is-page
+title: Build-To-Order Web/Mobile Solutions
+
+brief:
+  <h2><strong>Delivering</strong> <br>superior web/mobile <br><strong>solutions</strong> is exactly <br>what we do!</h2>
+
+
+description:
+  <p><strong>We set up</strong> an engineering team for you <strong>and take responsibility</strong> for all processes, from requirements management and project planning to development and quality assurance. We ensure that your managed development team works efficiently on your project. All you need to do is provide your high-level requirements and we’ll take care of everything else. On time, on budget, on scope – you can have all three.</p>
+
+vslider:
+  - When you’re struggling to <strong>find the right talent</strong>
+  - When your core team is busy and <strong>you need a backup</strong>
+  - When local hires are expensive and you need to <strong>optimize your budget</strong>
+  - When your workload is variable and you need to <strong>scale quickly</strong>
+  - When your expertise is insufficient and you need <strong>mastery of a narrow technology</strong>
+
+specialisations:
+  - <h2>HTML & CSS</h2>
+  - <h2>JavaScript</h2>
+  - <h2>Angular</h2>
+  - <h2>React JS</h2>
+  - <h2>Node JS</h2>
+  - <h2>Cordova</h2>
+  - <h2>.NET</h2>
+  - <h2>JAVA</h2>
+
+dslider:
+  -
+    img: img/cylinder-1.png
+    text: <h2>Identification of client’s needs</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Defining job description</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>IT talents search</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 4</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-1.png
+    text: <h2>Stage 5</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>Stage 6</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 7</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+
+benefits:
+  - <h2>Transparent delivery process</h2>
+  - <h2>Quick feedback</h2>
+    <p>we use <strong>Agile</strong> methodologies</p>
+  - <h2>Your best team</h2>
+  - <h2>Our expertise</h2>
+  - <h2>No recruiting or retention stress</h2>
+  - <h2>Payroll freedom</h2>
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="main">
+
+   {% include "partials/_header.html" %}
+
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="webmob">
+        {% include "pages/_webmob.html" %}
+      </div>
+    </div>
+    {% include "partials/_footer.html" %}
+
+  </div>
+
+{% endblock %}

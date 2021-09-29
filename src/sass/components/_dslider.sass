@@ -1,0 +1,226 @@
+.dslider
+	position: relative
+	height: 250px
+	+rmin($m)
+		height: 600px
+	&__in
+		height: 250px
+		+rmin($d)
+			transform: rotate(-60deg)
+			transform-origin: 0 0
+			overflow: visible
+	&__controller
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 300px
+		z-index: 5
+	&__line
+		position: absolute
+		top: 0
+		left: 0
+		transform-origin: 0 0
+		z-index: -1
+		display: none
+		+rmin($m)
+			display: block
+	&__img
+		width: 120px
+		height: 120px
+		position: relative
+		z-index: -1
+		+rmin($m)
+			width: 120px
+			min-width: 110px
+			height: 120px
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	&__pic
+		+coverdiv
+		transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1)
+	&__dot
+		+vcenter
+		z-index: 5
+		&:before
+			content: ""
+			+vcenter
+			background: #000
+			width: 4px
+			height: 4px
+			border-radius: 50%
+			z-index: 1
+			opacity: 0
+			display: none
+			+rmin($m)
+				display: block
+		&:after
+			content: ""
+			width: 14px
+			height: 14px
+			background: #27dec3
+			border-radius: 50%
+			z-index: 0
+			transform: scale3d(0, 0, 1)
+			transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1)
+			display: none
+			+rmin($m)
+				display: block
+	&__text
+		font-size: 12px
+		+ssp-r
+		color: #333
+		padding-left: 25px
+		+rmin($m)
+			font-size: 15px
+			padding-left: 50px
+		h2
+			+ssp-sb
+			font-weight: normal
+			color: #333
+			opacity: 0
+			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1)
+			transform-origin: 0 100%
+			font-size: 18px
+			+rmin($m)
+				font-size: 24px
+			+rmin($d)
+				font-size: 40px
+
+		p
+			margin-bottom: 0
+			opacity: 0
+			transform: translateY(20px)
+			transition: all .6s cubic-bezier(0.215, 0.61, 0.355, 1)
+	.num
+		white-space: nowrap
+		position: absolute
+		top: 20px
+		left: 0
+		+rmin($m)
+			position: static
+	.dslide
+		display: flex
+		align-items: center
+		height: 250px
+		// transition: opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1)
+		opacity: 0
+		// &:first-child
+		// 	opacity: 1
+		+rmin($d)
+			opacity: 1
+			margin-bottom: 100px
+			transform: rotate(60deg)
+			transform-origin: 0 0
+		.dslider__pic
+			img
+				filter: blur(6px)
+		&.is-active
+			opacity: 1
+			z-index: 5
+			.dslider__pic
+				+rmin($m)
+					transform: scale3d(1.5, 1.5, 1)
+				img
+					filter: blur(0)
+			.dslider__dot
+				&:before
+					opacity: 1
+				&:after
+					transform: scale3d(1, 1, 1)
+			.dslider__text
+				h2
+					opacity: 1
+				p
+					opacity: 1
+					transform: translateY(0)
+		&.is-prev
+			+rmin($m)
+				opacity: 1
+			.dslider__dot
+				&:after
+					+rmin($m)
+						transform: scale3d(0, 0, 0)
+			.dslider__pic
+				+rmin($m)
+					transform: scale3d(1.8, 1.8, 1)
+		&.is-next
+			+rmin($m)
+			opacity: 1
+			& + .dslide
+				+rmin($m)
+					opacity: 1
+				& + .dslide
+					+rmin($m)
+						opacity: 1
+			.dslider__pic
+				img
+					filter: blur(6px)
+			.dslider__dot
+				&:before
+					opacity: 1
+			.dslider__text
+				h2
+					opacity: 0.5
+					+rmin($m)
+						transform: scale3d(0.25, 0.25, 1)
+				p
+					opacity: 0
+
+	// .swiper-slide-active
+	// 	opacity: 1
+	// 	z-index: 5
+	// 	.dslider__pic
+	// 		+rmin($m)
+	// 			transform: scale3d(1.5, 1.5, 1)
+	// 		img
+	// 			filter: blur(0)
+	// 	.dslider__dot
+	// 		&:before
+	// 			opacity: 1
+	// 		&:after
+	// 			transform: scale3d(1, 1, 1)
+	// 	.dslider__text
+	// 		h2
+	// 			opacity: 1
+	// 		p
+	// 			opacity: 1
+	// 			transform: translateY(0)
+	// .swiper-slide-next
+	// 	+rmin($m)
+	// 		opacity: 1
+	// 	& + .swiper-slide
+	// 		+rmin($m)
+	// 			opacity: 1
+	// 		& + .swiper-slide
+	// 			+rmin($m)
+	// 				opacity: 1
+	// 	.dslider__pic
+	// 		img
+	// 			filter: blur(6px)
+	// 	.dslider__dot
+	// 		&:before
+	// 			opacity: 1
+	// 	.dslider__text
+	// 		h2
+	// 			opacity: 0.5
+	// 			+rmin($m)
+	// 				transform: scale3d(0.25, 0.25, 1)
+	// 		p
+	// 			opacity: 0
+	// .swiper-slide-prev
+	// 	+rmin($m)
+	// 		opacity: 1
+	// 	.dslider__dot
+	// 		&:after
+	// 			+rmin($m)
+	// 				transform: scale3d(0, 0, 0)
+	// 	.dslider__pic
+	// 		+rmin($m)
+	// 			transform: scale3d(1.8, 1.8, 1)
+
+@keyframes dash
+	to
+		stroke-dashoffset: 0

@@ -1,0 +1,68 @@
+.title
+	position: relative
+	margin-top: 50px
+	margin-bottom: 50px
+	padding-left: 50px
+	+rmin($m)
+		padding-left: 75px
+	+rmin($d)
+		margin-bottom: 0
+		padding-left: 100px
+	.num
+		position: absolute
+		top: 49%
+		font-size: 10px
+		color: #333
+		left: -25px
+		+rmin($m)
+			left: -50px
+	&__in
+		position: relative
+	&__svg
+		position: relative
+		svg
+			width: 100%
+			min-width: 100vw
+			height: 200px
+			+rmin($m)
+				height: 300px
+			+rmin($d)
+				height: 350px
+		text
+			font-size: 100px
+	&__img
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		+rmin($d)
+			z-index: 1
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+.brief
+	display: flex
+	+rmin($d)
+		justify-content: flex-end
+	&__in
+		position: relative
+		right: -75px
+		+rmin($d)
+			right: 100px
+	&__text
+		h2
+			font-size: 18px
+			font-weight: normal
+			line-height: 1.2
+			+ssp-l
+			color: #aaa
+			+rmin($m)
+				font-size: 24px
+			+rmin($d)
+				font-size: 40px
+		strong
+				+ssp-sb
+				color: #333

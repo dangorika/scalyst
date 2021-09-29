@@ -1,0 +1,80 @@
+.tlist
+	display: flex
+	&__message
+		width: 255px
+		+ssp-sb
+		font-size: 12px
+		color: #ccc
+		font-weight: normal
+		margin-top: 32px
+		padding-left: 50px
+	&__in
+		width: calc(100% - 255px)
+		position: relative
+	&__slider
+		&.is-clip
+			text
+				fill: #0000ff
+	&__track
+		overflow: visible
+		max-height: 90px
+	&__slide
+		padding-left: 25px
+		padding-right: 100px
+		position: relative
+		width: auto
+		a
+			display: block
+			width: calc(100% - 75px)
+			height: 45px
+			position: absolute
+			top: 21px
+			left: 0
+			z-index: 2
+		&:nth-child(1)
+			svg, img
+				width: 285px
+				height: 262px
+				margin-top: -90px
+		&:nth-child(2)
+			svg, img
+				width: 458px
+				height: 262px
+				margin-top: -90px
+		&:nth-child(3)
+			svg, img
+				width: 285px
+				height: 262px
+				margin-top: -90px
+			img
+				object-position: 20px 50%
+
+.tslide
+	display: block
+	text-decoration: none
+	position: relative
+	z-index: 1
+	.num
+		position: absolute
+		left: -25px
+		top: 36px
+		font-size: 7px
+		color: #333
+	&__svg
+		position: relative
+	&__img
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		z-index: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	img
+		transform: scale(0.3)
+		opacity: 0
+	path
+		opacity: 0

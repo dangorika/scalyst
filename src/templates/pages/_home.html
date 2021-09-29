@@ -1,0 +1,105 @@
+<div class="home">
+
+
+  <section class="section section--desc" id="we">
+    {{ mixins.cyl({lg: true, md: true, sm: true}) }}
+
+    <div class="l">
+      {% include "partials/_description.html" %}
+    </div>
+  </section>
+
+
+  <section class="section section--facts">
+    {{ mixins.cyl({lg: true, lgr: true, md: true, sm: true}) }}
+    <div class="l">
+      <div class="section__heading" data-prlx="20">
+        <h2>Quick facts</h2>
+      </div>
+      <div class="section__title">
+        <span class="num">002</span>
+        <h3>why Ukraine</h3>
+      </div>
+      {% include "partials/_facts.html" %}
+    </div>
+  </section>
+
+
+  <section class="section" id="values">
+    <div class="l">
+      <div class="section__heading" data-prlx="20">
+        <h2>Our values</h2>
+      </div>
+      <div class="section__title">
+        <span class="num">003</span>
+        <h3>Our values</h3>
+      </div>
+      {% include "partials/_values.html" %}
+    </div>
+  </section>
+
+
+
+  <section class="section section--contacts" id="contacts">
+    <div class="l">
+
+      <div class="section__title">
+        <span class="num">004</span>
+        <h3>Get in touch</h3>
+      </div>
+
+      <div class="message">
+        <div class="message__title js-lighten cl">
+          <div>
+            <h4>Let’s take<br> <strong>your business</strong> <br>to the <strong>next level</strong></h4>
+          </div>
+        </div>
+        <div class="message__link js-link cl-l" data-cursor="click">
+          <a href="mailto:hello@scalyst.co">hello@scalyst.co</a>
+        </div>
+      </div>
+
+      <div class="js-text">
+        <div>
+          <div class="section__heading" data-prlx="20">
+            <h2>Contact us</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="section__phone img js-img cl-r">
+        <div>
+          <div class="img__in js-scaleup" data-rotation="-5%">
+            <img src="img/phone-bl.png" alt="">
+          </div>
+        </div>
+        <div class="is-clip">
+          <div class="img__in js-scaleup" data-rotation="-5%">
+            <img src="img/phone.png" alt="">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="message">
+        <div class="message__title js-lighten cl">
+          <div>
+            <h4><strong>Exceed</strong> your own<br><strong>expectations</strong> with us</h4>
+          </div>
+        </div>
+        <div class="message__link js-link cl-l" data-cursor="click">
+          <a href="mailto:hello@scalyst.co">jobs@scalyst.co</a>
+        </div>
+        <div class="message__text js-lighten cl">
+          <div>
+            <p>If you like what we do and think that we could be a good fit — feel free to send us your CV and tell about cool projects you have been working on</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+</div>

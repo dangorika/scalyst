@@ -1,0 +1,68 @@
+<div class="cols">
+
+  {{ mixins.cyl({lg: true, md: true, sm: true}) }}
+
+  <div class="cols__col cols__col--l">
+    <div class="cols__text js-lighten cl">
+      <div>
+        <p>We are young and ambitious for a good reason. Every Scalyst employee has got not less than 5 years of IT experience and extensive knowledge in different domains. It is our advantage that helps us be agile and able to meet all possible customer requirements. We do our best to identify and analyze your needs and help you drive your business to the next level.</p>
+        <p>Our core team is made up of not just engineers, software testers and designers. We have managed to unite people who are both great professionals and are absolutely result driven and motivated. We have developed the synergy aimed at high quality.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols__col cols__col--r">
+    <div class="cols__list js-fixed-height" data-max-items="7">
+      {% if test %}
+      <h3 class="list-title">what we test</h3>
+      {% endif %}
+      <ul class="col-list js-jelly">
+        {% for s in specialisations %}
+        <li>
+          <div class="num">
+            <span class="num__current">000{{ loop.index }}</span>
+            {% if loop.length < 10 %}
+            — 000{{ loop.length }}
+            {% else %}
+            — 00{{ loop.length }}
+            {% endif %}
+          </div>
+          <div class="col-list__text">
+            {{ s | safe }}
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      <button class="btn js-link js-show-more cl-l" data-cursor="click" data-more="load more" data-less="show less">
+        <span>load more</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+
+{% if test %}
+<div class="grid-cols">
+
+  {{ mixins.cyl({lg: true, md: true, sm: true}) }}
+
+  <h3 class="list-title">test solutions</h3>
+  <ul class="grid-list js-jelly">
+    {% for t in test %}
+    <li>
+      <div class="num">
+        <span class="num__current">000{{ loop.index }}</span>
+        {% if loop.length < 10 %}
+        — 000{{ loop.length }}
+        {% else %}
+        — 00{{ loop.length }}
+        {% endif %}
+      </div>
+      <div class="grid-list__text">
+        {{ t | safe }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}

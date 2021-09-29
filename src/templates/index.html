@@ -1,0 +1,32 @@
+---
+class: is-start
+title: Start page
+text:
+  <h2><strong>We</strong> <br/ ><strong>help</strong> tech companies <br /><strong>scale</strong> engineering capacity and <br /><strong>deliver</strong> great software</h2>
+
+description:
+  <p>We have created Scalyst based on the idea of a <strong>strong</strong>, really <strong>responsible</strong> and <strong>professional team</strong>. The team that was meant to be a credible player in the IT landscape. And we are proud of having reached our objective.</p><p>We are young and ambitious for a good reason. Every Scalyst employee has got <strong>not less than 5 years of IT experience</strong> and extensive knowledge in different domains. It is our advantage that helps us be agile and able to meet all possible customer requirements. We do our best to identify and analyze your needs and help you drive your business to the next level.</p>
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="main">
+
+	 {% include "partials/_header.html" %}
+
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="start">
+        {% include "pages/_start.html" %}
+
+        <div class="home-mob">
+          {% include "pages/_home.html" %}
+        </div>
+      </div>
+    </div>
+
+    {% include "partials/_footer.html" %}
+
+  </div>
+
+{% endblock %}

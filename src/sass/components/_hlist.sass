@@ -1,0 +1,107 @@
+.hlist
+	position: absolute
+	top: 0
+	left: 0
+	width: 100vw
+	height: 100vh
+	overflow: hidden
+	display: none
+	+rmin($d)
+		display: block
+	&__message
+		+ssp-sb
+		font-size: 15px
+		color: #ccc
+		font-weight: normal
+		margin-top: 32px
+		left: 255px
+		bottom: 150px
+		position: absolute
+		z-index: 1
+	&__in
+		position: relative
+		height: 100%
+	&__slider
+		height: 100%
+		&.is-clip
+			text
+				fill: #0000ff
+	&__track
+		overflow: visible
+		height: 100%
+		padding-left: 255px - 25px
+	&__slide
+		padding-left: 25px
+		padding-right: 200px
+		position: relative
+		width: auto
+		display: flex
+		align-items: flex-end
+		a
+			display: block
+			width: calc(100% - 175px)
+			height: 70px
+			position: absolute
+			bottom: 70px
+			left: 0
+			z-index: 2
+		&:nth-child(1)
+			svg, .hslide__img img
+				width: 380px
+				height: 350px
+				margin-top: -120px
+		&:nth-child(2)
+			svg, .hslide__img img
+				width: 610px
+				height: 350px
+				margin-top: -120px
+			.hlist__cyl img
+				transform: scale(0.5)
+		&:nth-child(3)
+			svg, .hslide__img img
+				width: 380px
+				height: 350px
+				margin-top: -120px
+			.hslide__img img
+				object-position: 20px 50%
+			.hlist__cyl img
+				transform: scale(0.5)
+	&__cyl
+		position: absolute
+		left: 0
+		top: 50%
+		transform: translateY(-50%)
+		margin-top: -50px
+		.img
+			width: 400px
+			height: 350px
+
+.hslide
+	display: block
+	text-decoration: none
+	position: relative
+	bottom: -70px
+	.num
+		position: absolute
+		left: -25px
+		top: 50px
+		font-size: 7px
+		color: #333
+	&__svg
+		position: relative
+	&__img
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		z-index: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+	img
+		transform: scale(0.3)
+		opacity: 0
+	path
+		opacity: 0

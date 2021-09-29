@@ -1,0 +1,139 @@
+.section
+	position: relative
+	margin-bottom: 100px
+	.l
+		position: relative
+		z-index: 1
+	&__heading
+		line-height: 1
+		margin-bottom: 50px
+		h1, h2, h3, h4, h5, h6
+			font-size: vw(250)
+			color: rgba(#000, .1)
+			font-family: 'Rozha One', Times, sans-serif
+			position: relative
+			white-space: nowrap
+			font-weight: normal
+			+rmin($d)
+				left: -50px
+	&__title
+		line-height: 1
+		margin-bottom: 50px
+		+rmin($d)
+			margin-bottom: 50px
+		h1, h2, h3, h4, h5, h6
+			display: inline-block
+			vertical-align: top
+			+ssp-sb
+			font-weight: normal
+			font-size: 12px
+			text-transform: uppercase
+			color: #333
+			letter-spacing: .3em
+		.num
+			margin-bottom: 6px
+			display: block
+	&__phone
+		max-width: 350px
+		position: absolute
+		right: 0
+		top: 50%
+		transform: translateY(-50%)
+		margin-top: 20px
+		+rmin($d)
+			max-width: 500px
+	&--onbg
+		z-index: 1
+	&--desc
+		.cyl__lg
+			top: 20%
+			left: 10%
+		.cyl__md
+			bottom: 50px
+			right: 5%
+		.cyl__sm
+			top: 30px
+			right: 30%
+	&--facts
+		.cyl
+			z-index: 1
+		.cyl__lg
+			top: 80px
+			left: 10%
+		.cyl__lgr
+			bottom: 150px
+			left: 10%
+		.cyl__md
+			top: 55%
+			right: 10%
+		.cyl__sm
+			top: 35%
+			left: 40%
+	&--vsl
+		z-index: 2
+		.cyl__lg
+			max-width: 60px
+			max-height: 80px
+			left: 30%
+			top: 80px
+			+rmin($d)
+				max-width: 100px
+				max-height: 250px
+				left: 40%
+				top: 40px
+		.cyl__sm
+			max-width: 60px
+			max-height: 60px
+			bottom: 30px
+			right: 10%
+			+rmin($d)
+				max-width: 80px
+				max-height: 80px
+				bottom: 30px
+				right: 30%
+.cols
+	.cyl__lg
+		max-width: 100px
+		max-height: 250px
+		top: 50px
+		left: 50%
+	.cyl__md
+		max-width: 200px
+		max-height: 350px
+		bottom: 30%
+		right: 50%
+	.cyl__sm
+		max-width: 80px
+		max-height: 80px
+		bottom: 50%
+		right: 100px
+.grid-cols
+	.cyl__lg
+		max-width: 100px
+		max-height: 250px
+		top: 50px
+		right: 40%
+	.cyl__md
+		max-width: 200px
+		max-height: 350px
+		bottom: 30px
+		left: 10%
+	.cyl__sm
+		max-width: 80px
+		max-height: 80px
+		bottom: 30%
+		right: 10%
+		+rmin($m)
+			bottom: 0
+			right: 100px
+
+.footer
+	.cyl__lg
+		top: 50px
+		left: 10%
+	.cyl__md
+		top: 250px
+		left: 50%
+	.cyl__sm
+		top: 30px
+		right: 10%

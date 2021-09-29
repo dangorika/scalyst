@@ -1,0 +1,260 @@
++font('Source Sans Pro Light', 'sourcesanspro-light-webfont')
++font('Source Sans Pro Regular', 'sourcesanspro-regular-webfont')
++font('Source Sans Pro Semibold', 'sourcesanspro-semibold-webfont')
++font('Source Sans Pro Bold', 'sourcesanspro-bold-webfont')
+
+=ssp-l
+	font-family: 'Source Sans Pro Light', Arial, Helvetica, sans-serif
+=ssp-r
+	font-family: 'Source Sans Pro Regular', Arial, Helvetica, sans-serif
+=ssp-sb
+	font-family: 'Source Sans Pro Semibold', Arial, Helvetica, sans-serif
+=ssp-b
+	font-family: 'Source Sans Pro Bold', Arial, Helvetica, sans-serif
+
+
+$d: 1025
+$m: 600
+$h-h-default: 70px
+$h-h-expanded: 130px
+
+$ease: cubic-bezier(0.215, 0.61, 0.355, 1)
+
+body
+	color: #333
+	+ssp-r
+	+smooth-font
+	min-width: 320px
+	overflow-x: hidden
+	background-color: #fafafa
+	+image('code.jpg')
+	background-repeat: no-repeat
+	background-position: 0 0
+	background-size: contain
+	*
+		+rmin($d)
+			cursor: none
+			user-select: none
+	&.is-disabled
+		pointer-events: none
+	&.is-modal
+		max-height: 100vh
+		overflow: hidden
+		.header
+			background: #fafafa
+
+	&.is-home, &.is-start
+		.main
+			background: #fafafa
+	&.is-start
+		+rmin($d)
+			overflow: hidden
+			height: 100vh
+	&.is-home
+		.header__bottom
+			pointer-events: auto
+	&.is-page
+		.main
+			+rmin($d)
+				margin: 50px
+				width: calc(100% - 100px)
+				height: calc(100% - 100px)
+		.cursor
+			&__lens
+				background: transparent
+
+	&.is-simple
+		*
+			+rmin($d)
+				cursor: auto
+				user-select: auto
+		a, button, a > span, button > span
+			+rmin($d)
+				cursor: pointer
+		.loader
+			+rmin($d)
+				display: block
+		.is-clip
+			clip-path: none
+		.cl
+			+rmin($d)
+				&> *.is-clip
+					display: none
+				& > *:not(.is-clip)
+					opacity: 1
+		.cl-l
+			+rmin($d)
+				&> *.is-clip
+					display: none
+				& > *:not(.is-clip)
+					transition: color .2s $ease
+					&:hover
+						color: #0000ff
+		.cl-r
+			+rmin($d)
+				& > *:not(.is-clip)
+					display: none
+				&> *.is-clip
+					position: static
+		.nav
+			padding: 29px 0
+			a
+				height: auto
+				line-height: normal
+		.description
+			position: relative
+			z-index: 2
+		.title__img
+			z-index: 0
+		.hlist__slider, .tlist__slider
+			&.is-clip
+				text
+					fill: #333
+
+
+.cl
+	+rmin($d)
+		& > *:not(.is-clip)
+			opacity: .2
+		&> *.is-clip
+			opacity: 1
+.cl-l
+	+rmin($d)
+		& > *:not(.is-clip)
+			color: inherit
+		&> *.is-clip
+			color: #0000ff
+.cl-r
+	& > *:not(.is-clip)
+		display: none
+		+rmin($d)
+			display: block
+	&> *.is-clip
+		position: static
+		+rmin($d)
+			position: absolute
+	&.img
+		z-index: -1
+	.cyl__in.is-clip
+		position: absolute
+
+
+.is-clip
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 2
+	+rmin($d)
+		clip-path: circle(0px at 0px 0px)
+.btn
+	appearance: none
+	background: none
+	border: none
+	text-decoration: none
+	text-transform: uppercase
+	color: #333
+	+ssp-sb
+	font-size: 15px
+	letter-spacing: .5em
+	display: inline-block
+	padding: .5em
+	line-height: 1
+.num
+	+ssp-r
+	font-size: 10px
+	color: #ccc
+	line-height: 1
+	display: inline-block
+	vertical-align: middle
+	&__current
+		color: #333
+.img
+	position: relative
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.scroll
+	display: none
+	+rmin($d)
+		display: block
+		+ssp-sb
+		font-size: 9px
+		letter-spacing: .3em
+		color: #aaa
+		writing-mode: tb-rl
+		line-height: 1
+		text-transform: uppercase
+	&__line
+		display: block
+		width: 1px
+		height: 53px
+		background: #aaa
+		position: relative
+		left: -.5em
+		transform-origin: 0 100%
+		// transform: scaleY(0)
+	&__text
+		position: relative
+		bottom: 63px
+		// opacity: 0
+.cyl
+	+coverdiv
+	z-index: 1
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__in
+		+coverdiv
+	&__lg, &__lgr
+		position: absolute
+		max-width: 100px
+		max-height: 200px
+		+rmin($m)
+			max-width: 150px
+			max-height: 250px
+		+rmin($d)
+			max-width: 250px
+			max-height: 350px
+	&__md
+		position: absolute
+		max-width: 100px
+		max-height: 80px
+		+rmin($m)
+			max-width: 150px
+			max-height: 100px
+		+rmin($d)
+			max-width: 250px
+			max-height: 150px
+	&__sm
+		position: absolute
+		max-width: 60px
+		max-height: 60px
+		+rmin($m)
+			max-width: 80px
+			max-height: 80px
+		+rmin($d)
+			max-width: 125px
+			max-height: 125px
+
+
+.loader
+	display: none
+	+rmin($d)
+		width: 50%
+		height: 65px
+		position: absolute
+		top: 0
+		right: 0
+		padding: 0 50px
+		transform: translateY(46vh)
+		+vertical
+		& > span
+			font-size: 10px
+			color: #333
+			text-transform: uppercase
+			display: inline-block
+			vertical-align: middle

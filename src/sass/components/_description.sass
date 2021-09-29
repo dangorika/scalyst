@@ -1,0 +1,19 @@
+.description
+	padding: 50px 0 20px
+	position: relative
+	+rmin($d)
+		padding: 150px 0 20px
+	&__text
+		+ssp-l
+		color: #777
+		line-height: 1.66
+		font-size: 18px
+		+rmin($m)
+			font-size: 24px
+		+rmin($d)
+			font-size: 30px
+		strong, b
+			+ssp-sb
+			color: #333
+		p
+			margin-bottom: 1.66em

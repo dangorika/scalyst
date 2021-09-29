@@ -1,0 +1,42 @@
+<div class="form">
+  <a href="" class="form__trigger btn js-link js-form-toggle cl-l" data-cursor="click">
+    <span>send a request</span>
+  </a>
+
+  <div class="form__in js-form">
+    <div class="form__line js-form-line"></div>
+    <form action="http://git.riverco.de/coderiver/scalyst/blob/master/build/mail.php" method="post" autocomplete="off">
+
+      <input type="hidden" name="admin_email" value="olya@coderiver.com.ua">
+
+      <div class="input js-input" data-cursor="|">
+        <input type="text" name="name">
+        <label for="">Your name</label>
+      </div>
+      <div class="input js-input" data-cursor="|">
+        <input type="text" name="email">
+        <label for="">Your email</label>
+      </div>
+      <div class="input js-input" data-cursor="|">
+        <input type="text" name="phone">
+        <label for="">Your phone</label>
+      </div>
+      <div class="input js-input" data-cursor="|">
+        <input type="text" name="message">
+        <label for="">How can we help you?</label>
+      </div>
+
+      <div class="input js-input" data-cursor="click">
+        <input type="file">
+        <label for="">+ attach file</label>
+        <div class="file">
+          <span class="js-file"></span>
+          <button class="btn js-file-remove">{{ mixins.icon('cancel') }}</button>
+        </div>
+      </div>
+      <div class="form__success js-form-success">Your message was successfully sent.</div>
+      <button class="form__submit btn js-link js-form-submit cl-l" type="submit" data-cursor="click"><span>Send</span></button>
+    </form>
+  </div>
+
+</div>

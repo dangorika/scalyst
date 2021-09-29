@@ -1,0 +1,113 @@
+.form
+	text-align: center
+	min-height: 400px
+	max-width: 600px
+	margin: 0 auto
+	&__trigger
+		position: relative
+		.is-clip
+			padding: .5em
+	&__line
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 2px
+		background-color: #333
+	&__in
+		position: relative
+		transform-origin: 0 0
+		height: 2px
+		overflow: hidden
+	form
+		padding-top: 50px
+	&__submit
+		margin-top: 10px
+		position: relative
+		&:hover
+			span
+				color: #0000ff
+		.is-clip
+			padding: .5em
+	&__success
+		font-size: 12px
+		color: #31b146
+		position: absolute
+		bottom: 40px
+		left: 50%
+		transform: translateX(-50%)
+
+.input
+	position: relative
+	z-index: 3
+	margin-bottom: 15px
+	input
+		width: 100%
+		height: 40px
+		border-radius: 0
+		border: none
+		border-bottom: 1px solid #eee
+		background: none
+		position: relative
+		text-align: center
+		+ssp-sb
+		font-size: 15px
+		color: #333
+		&[type="file"]
+			opacity: 0
+			cursor: pointer
+			border-bottom: none
+			& + label
+				font-size: 10px
+				text-transform: uppercase
+				letter-spacing: .3em
+				color: #333
+				+ssp-b
+		&:-webkit-autofill
+			border: none
+			border-bottom: 1px solid #eee
+			box-shadow: inset 0 0 0px 9999px #fff
+			background-color:
+		&:-webkit-autofill:focus
+			border: none
+			border-bottom: 1px solid #eee
+			box-shadow: inset 0 0 0px 9999px #fff
+		&::-ms-clear
+			display: none
+		&.error
+			border-bottom-color: #d92a2a
+	label
+		&:not(.error)
+			+vcenter
+			font-size: 15px
+			color: #777
+			+trans(.6s)
+			z-index: -1
+			white-space: nowrap
+		&.error
+			font-size: 10px
+			color: #d92a2a
+			position: absolute
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+	&.is-ready
+		label:not(.error)
+			transform: translate(0, -50%)
+			left: 0
+			+xs
+				opacity: 0
+
+.file
+	display: none
+	font-size: 15px
+	color: #aaa
+	+vcenter
+	width: 100%
+	&.is-active
+		display: block
+	.btn
+		font-size: 8px
+		padding: 4px
+		.icon
+			fill: #aaa

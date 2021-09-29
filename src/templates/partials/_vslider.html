@@ -1,0 +1,53 @@
+<div id="vsliderPin">
+<div class="vsliders">
+  <div class="vpages cl-r">
+
+    <div class="vpages__in js-vslider-pages">
+      <div class="vpages__track js-scroll-pages">
+        {% for slide in vslider %}
+        <div class="vpage js-scroll-page">
+          <h3>000{{ loop.index }}
+            <span class="total">- 000{{ vslider.length }}</span>
+          </h3>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="vpages__in js-vslider-pages-cl is-clip">
+      <div class="vpages__track js-scroll-pages">
+        {% for slide in vslider %}
+        <div class="vpage js-scroll-page">
+          <h3>000{{ loop.index }}
+            <span class="total">- 000{{ vslider.length }}</span>
+          </h3>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="vslider cl-r">
+
+    <div class="vslider__in js-vslider">
+      <div class="vslider__track js-scroll-slider">
+        {% for slide in vslider %}
+        <div class="vslide js-scroll-slide">
+          <h2>{{ slide | safe }}</h2>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="vslider__in js-vslider-cl is-clip">
+      <div class="vslider__track js-scroll-slider">
+        {% for slide in vslider %}
+        <div class="vslide js-scroll-slide">
+          <h2>{{ slide | safe }}</h2>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>

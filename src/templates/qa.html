@@ -1,0 +1,86 @@
+---
+class: is-page
+title: On-Demand QA
+
+brief:
+  <h2>We bring <br><strong>positive experience</strong> <br>to your customers by <br><strong>making quality</strong> of <br>your solutions <br><strong>the rule.</strong></h2>
+
+description:
+  <p>Scalyst is a provider of QA and testing services. <strong>We assist</strong> in improving the quality of our customers' products and solutions <strong>by performing</strong> a wide range of software testing types.<br><strong>We provide</strong> a fresh review of the product quality and ensure an <strong>objective checking</strong> of the whole solution from totally different, untypical perspectives in order to detect as many failures as possible.</p>
+
+vslider:
+  - When you’re struggling to <strong>find the right talent</strong>
+  - When your core team is busy and <strong>you need a backup</strong>
+  - When local hires are expensive and you need to <strong>optimize your budget</strong>
+  - When your workload is variable and you need to <strong>scale quickly</strong>
+  - When your expertise is insufficient and you need <strong>mastery of a narrow technology</strong>
+
+specialisations:
+  - <h2>Mobile Apps</h2>
+  - <h2>Web</h2>
+  - <h2>Desktop</h2>
+  - <h2>eCommerce</h2>
+  - <h2>APIs</h2>
+  - <h2>Internet of Things (IoT)</h2>
+  - <h2>VR/AR</h2>
+
+dslider:
+  -
+    img: img/cylinder-1.png
+    text: <h2>Identification of client’s needs</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Defining job description</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>IT talents search</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 4</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-1.png
+    text: <h2>Stage 5</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>Stage 6</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 7</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+
+test:
+  - <h2>Functional Testing</h2>
+  - <h2>Interoperability Testing</h2>
+  - <h2>UI/UX Testing</h2>
+  - <h2>Test Automation </h2>
+  - <h2>Exploratory Testing </h2>
+  - <h2>Agile QA Load & <br>Performance Testing</h2>
+  - <h2>Accessibility Testing</h2>
+  - <h2>End-To-End Testing</h2>
+  - <h2>Crowd Testing</h2>
+
+benefits:
+  - <h2>Quick project start</h2>
+    <p>within <strong>24</strong> hours</p>
+  - <h2>Our QA certified experts</h2>
+  - <h2>Transparent testing process</h2>
+  - <h2>A wide range of devices, OSs, testing tools and environments</h2>
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="main">
+
+   {% include "partials/_header.html" %}
+
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="qa">
+        {% include "pages/_qa.html" %}
+      </div>
+    </div>
+    {% include "partials/_footer.html" %}
+
+  </div>
+
+{% endblock %}

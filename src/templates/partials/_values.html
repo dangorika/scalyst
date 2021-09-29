@@ -1,0 +1,49 @@
+{% set values = [
+  {
+    title: '<h3>Quality</h3>',
+    text: '<p>The difference between other companies and Scalyst is exceptional quality. It is our major value and the ultimate priority for our team.</p>',
+    img: 'img/trophy.png',
+    blur: 'img/trophy-bl.png'
+  },
+  {
+    title: '<h3>Collaboration</h3>',
+    text: '<p>We enjoy working with people. Creating amazing software require teamwork, partnerships, and collaboration both within the team and the customer.</p>',
+    img: 'img/gear.png',
+    blur: 'img/gear-bl.png'
+  },
+  {
+    title: '<h3>Transparency</h3>',
+    text: '<p>With our "open book" pricing model you will keep track of your IT realted expenses efficiently. No hidden fees. Everything is transparent and clear.</p>',
+    img: 'img/glass.png',
+    blur: 'img/glass-bl.png'
+  }
+]
+%}
+
+
+<div class="values">
+
+  {% for v in values %}
+    <div class="value">
+      <div class="value__img img js-img cl-r">
+        <div>
+          <div class="img__in js-scaleup" data-prlx="-25">
+            <img src="{{ v.blur }}" alt="">
+          </div>
+        </div>
+        <div class="is-clip">
+          <div class="img__in js-scaleup" data-prlx="-25">
+            <img src="{{ v.img }}" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="value__text js-lighten cl">
+        <div>
+          {{ v.title | safe }}
+          {{ v.text | safe }}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+</div>

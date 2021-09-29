@@ -1,0 +1,69 @@
+---
+class: is-page
+title: Bright Dedicated Team
+
+brief:
+  <h2>We can build <br><strong>teams</strong> exactly <br><strong>matched to your</strong> product <br><strong>requirements</strong></h2>
+
+description:
+  <p>We <strong>set up</strong>, <strong>scale</strong> and <strong>manage</strong> your remote engineering organization.<br>You have direct access to and control over the dedicated development team, just like you do with your in-house engineers. Plus you get all the advantages of our Eastern European outsourcing location, including lower costs and a high level of expertise.</p>
+
+vslider:
+  - When you’re struggling to <strong>find the right talent</strong>
+  - When your core team is busy and <strong>you need a backup</strong>
+  - When local hires are expensive and you need to <strong>optimize your budget</strong>
+  - When your workload is variable and you need to <strong>scale quickly</strong>
+  - When your expertise is insufficient and you need <strong>mastery of a narrow technology</strong>
+
+dslider:
+  -
+    img: img/cylinder-1.png
+    text: <h2>Identification of client’s needs</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Defining job description</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>IT talents search</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 4</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-1.png
+    text: <h2>Stage 5</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-2.png
+    text: <h2>Stage 6</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+  -
+    img: img/cylinder-3.png
+    text: <h2>Stage 7</h2> <p>We cover all aspects of the software engineering process, starting with your strategy. <br>So while we design, develop, and support your software products, you can focus on your core business.</p>
+
+
+benefits:
+  - <h2>Cost reduction up to 60%</h2>
+  - <h2>100% transparency price</h2>
+    <p>we use <strong>Cost+</strong> financial model</p>
+  - <h2>No recruiting and retention stress</h2>
+  - <h2>Your best team</h2>
+  - <h2>Flexible and direct access to your resources</h2>
+  - <h2>Our expertise</h2>
+
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+  <div class="main">
+
+   {% include "partials/_header.html" %}
+
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="team">
+        {% include "pages/_team.html" %}
+      </div>
+    </div>
+    {% include "partials/_footer.html" %}
+
+  </div>
+
+{% endblock %}

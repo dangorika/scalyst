@@ -1,0 +1,49 @@
+.cursor
+	display: none
+	+rmin($d)
+		display: block
+		position: fixed
+		z-index: 0
+		top: 0
+		left: 0
+		margin-top: -100px
+		margin-left: -100px
+		width: 200px
+		height: 200px
+	&__lens
+		box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, .1)
+		background: #fff
+		width: 200px
+		height: 200px
+		border-radius: 50%
+		transform: scale(0)
+	&__text
+		width: 100%
+		text-align: center
+		font-size: 10px
+		color: #333
+		line-height: 1
+		text-transform: uppercase
+		+vcenter
+		z-index: 2
+		.icon, span
+			display: inline-block
+			vertical-align: middle
+		.icon
+			margin: 9px
+			display: none
+	&.is-transitioning
+		.cursor__text
+			opacity: 0
+			transition: transform .3s cubic-bezier(0.215, 0.61, 0.355, 1)
+	&.is-horizontal
+		.icon
+			display: inline-block
+	&.is-vertical
+		.icon
+			display: block
+			margin: 12px auto
+			transform: rotate(90deg)
+	&.is-typing
+		.cursor__text
+			font-size: 20px
